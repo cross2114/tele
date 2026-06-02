@@ -387,17 +387,17 @@ img { display: block; max-width: 100%; }
 
 .why-panel > img {
   position: absolute;
-  left: -13px;
-  bottom: -136px;
-  width: 1903px;
-  height: 787px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center bottom;
   z-index: 0;
   will-change: transform;
 }
 
 .about-section.is-scroll-bound .why-panel > img {
-  transform: translateY(calc((1 - var(--about-panel)) * 150px));
+  transform: translateY(calc((1 - var(--about-panel)) * 90px));
 }
 
 .why-panel h2 {
@@ -500,9 +500,9 @@ img { display: block; max-width: 100%; }
   width: 961px;
 }
 
-.feature-a img { height: 440px; }
-.feature-b img { height: 420px; }
-.feature-c img { height: 467px; }
+.feature-a img { height: 542px; }
+.feature-b img { height: 523px; }
+.feature-c img { height: 580px; }
 
 .stats-section {
   position: relative;

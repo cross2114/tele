@@ -126,8 +126,8 @@ export default function Home() {
                 <p>AI that adapts to your lifestyle — from meeting summaries to pet behavior insights.</p>
               </div>
               <div className="why-card why-d">
-                <h3>Data Privacy</h3>
-                <p>Designed to protect personal moments, locations, and family communication.</p>
+                <h3>Designed For Tomorrow</h3>
+                <p>A forward-looking ecosystem built for the next generation of smart living.</p>
               </div>
             </div>
           </div>
