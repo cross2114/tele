@@ -114,14 +114,17 @@ img { display: block; max-width: 100%; }
 }
 
 .arrow-button.small {
-  min-height: 40px;
-  padding-left: 14px;
-  font-size: 13px;
+  height: 52px;
+  min-height: 52px;
+  gap: 10px;
+  padding: 5px 5px 5px 22px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .arrow-button.small span {
-  width: 30.7px;
-  height: 30px;
+  width: 43px;
+  height: 42px;
 }
 
 .contact-pill:hover,
@@ -462,7 +465,7 @@ img { display: block; max-width: 100%; }
 .feature {
   position: absolute;
   display: grid;
-  gap: 40px;
+  gap: 42px;
 }
 
 .feature img {
@@ -473,9 +476,21 @@ img { display: block; max-width: 100%; }
 
 .feature > div {
   display: grid;
-  gap: 12px;
+  gap: 0;
   align-content: start;
   justify-items: start;
+}
+
+.feature .eyebrow {
+  margin-bottom: 16px;
+}
+
+.feature h3 {
+  margin-bottom: 16px;
+}
+
+.feature .body-copy {
+  margin-bottom: 30px;
 }
 
 .feature .arrow-button {
