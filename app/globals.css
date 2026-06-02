@@ -451,7 +451,7 @@ img { display: block; max-width: 100%; }
 
 .technology-section {
   position: relative;
-  min-height: 2566px;
+  min-height: 2860px;
   padding: 118px var(--side) 85px;
   background: #fff;
 }
@@ -504,13 +504,13 @@ img { display: block; max-width: 100%; }
 }
 
 .feature-b {
-  top: 914px;
+  top: 1100px;
   left: 40px;
   width: 865px;
 }
 
 .feature-c {
-  top: 1756px;
+  top: 2030px;
   right: 40px;
   width: 961px;
 }
