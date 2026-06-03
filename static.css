@@ -451,7 +451,7 @@ img { display: block; max-width: 100%; }
 
 .technology-section {
   position: relative;
-  min-height: 2860px;
+  min-height: 3100px;
   padding: 118px var(--side) 85px;
   background: #fff;
 }
