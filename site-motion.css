@@ -1,0 +1,67 @@
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-duration: 700ms;
+}
+/* Individual translate / scale leave the design's existing transform and rotation intact. */
+.site-motion .hero-copy { animation: none; }
+.site-motion .motion-enter,
+.site-motion .motion-media,
+.site-motion .motion-icon,
+.site-motion .motion-logo,
+.site-motion .motion-card {
+  transition:
+    opacity var(--motion-duration) var(--motion-ease) var(--enter-delay, 0ms),
+    translate var(--motion-duration) var(--motion-ease) var(--enter-delay, 0ms),
+    scale 500ms var(--motion-ease),
+    filter 500ms var(--motion-ease),
+    box-shadow 350ms var(--motion-ease),
+    border-color 350ms ease,
+    background-color 350ms ease;
+}
+.site-motion .motion-enter[data-enter-state="pending"] { opacity: 0; }
+.site-motion.motion-preparing .motion-enter { transition: none; }
+.site-motion .motion-enter.enter-moves { translate: 0 0; }
+.site-motion .motion-enter.enter-moves[data-enter-state="pending"] { translate: 0 var(--enter-distance, 22px); }
+.site-motion .motion-enter[data-enter-state="pending"] { will-change: opacity, translate; }
+.site-motion .motion-enter[data-enter-state="entered"] { opacity: var(--enter-opacity, 1); }
+.site-motion .motion-media,
+.site-motion .motion-icon,
+.site-motion .motion-logo { transform-origin: center; }
+
+@media (hover: hover) and (pointer: fine) {
+  .site-motion [data-hover-surface]:is(:hover, :focus-within) .motion-media,
+  .site-motion .motion-media:hover { scale: 1.035; }
+  .site-motion [data-hover-surface]:is(:hover, :focus-within) .motion-icon,
+  .site-motion .motion-icon:hover { scale: 1.12; }
+  .site-motion .motion-logo:is(:hover, :focus-within),
+  .site-motion [data-hover-surface]:is(:hover, :focus-within) .motion-logo { scale: 1.045; }
+  .site-motion [data-hover-surface]:is(:hover, :focus-within) .motion-tone,
+  .site-motion .motion-tone:hover { filter: brightness(1.035) saturate(1.045); }
+  .site-motion .motion-card:is(:hover, :focus-within) {
+    box-shadow: 0 15px 38px #15295b12;
+    border-color: #013afa40;
+  }
+  .site-motion .motion-card.can-lift:not([data-enter-state="pending"]):is(:hover, :focus-within) { translate: 0 -5px; }
+  .site-motion .motion-card [data-figma-icon] { transition: background-color .3s ease; }
+}
+
+.site-motion a:focus-visible,
+.site-motion button:focus-visible,
+.site-motion summary:focus-visible { outline: 2px solid #013afa; outline-offset: 5px; }
+.site-motion .product-menu { animation: menu-arrive 260ms var(--motion-ease) both; }
+@keyframes menu-arrive { from { opacity: 0; translate: 0 -8px; } to { opacity: 1; translate: 0 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-motion .motion-enter,
+  .site-motion .motion-media,
+  .site-motion .motion-icon,
+  .site-motion .motion-logo,
+  .site-motion .motion-card { transition: none !important; }
+  .site-motion .motion-enter[data-enter-state="pending"] { opacity: var(--enter-opacity, 1); }
+  .site-motion .motion-enter.enter-moves,
+  .site-motion .motion-card.can-lift { translate: 0 0 !important; }
+  .site-motion .motion-media,
+  .site-motion .motion-icon,
+  .site-motion .motion-logo { scale: none !important; }
+  .site-motion .product-menu { animation: none; }
+}

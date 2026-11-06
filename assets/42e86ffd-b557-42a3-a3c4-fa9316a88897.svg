@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1000015946">
+<g id="Ellipse 975" filter="url(#filter0_d_0_176)">
+<circle cx="57" cy="57" r="40" fill="white"/>
+</g>
+<g id="Frame 2085661213">
+<path id="Vector 325" d="M62 44.5L49.5 57L62 69.5" stroke-width="3" stroke="#0F1011"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_176" x="0" y="0" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="8.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_176"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_176" result="shape"/>
+</filter>
+</defs>
+</svg>

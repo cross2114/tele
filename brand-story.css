@@ -1,0 +1,160 @@
+/* Figma 26274:1453 / 1540. The blue panel scrolls over the pinned vision. */
+.brand-story {
+  --panel-height: calc(95.8vw * .536413);
+  --pin-top: max(0px, calc((100svh - var(--panel-height)) / 2));
+  --cover-travel: 32svh;
+  position: relative;
+  isolation: isolate;
+  margin: 50px 2.1% 0;
+}
+.brand-story .vision {
+  position: sticky;
+  top: var(--pin-top);
+  height: var(--panel-height);
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f3f4f6;
+  z-index: 0;
+}
+.brand-story .vision__art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-origin: 50% 69.64%;
+  transform: translate3d(0, var(--vision-drift, calc(var(--panel-height) * .4)), 0) scale(.68);
+}
+.brand-story .vision__foreground {
+  position: absolute;
+  left: 50%;
+  top: 69.64%;
+  width: 57.418%;
+  height: auto;
+  max-width: none;
+  opacity: .88;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  filter: blur(clamp(18px, 1.6vw, 30px));
+}
+.brand-story .vision__ghost {
+  position: absolute;
+  left: 32.5%;
+  top: 33.131%;
+  width: 37.228%;
+  height: 109.017%;
+  overflow: hidden;
+  opacity: .24;
+  filter: blur(clamp(14px, 1.2vw, 24px));
+}
+.brand-story .vision__ghost-curve {
+  position: absolute;
+  left: 48.9%;
+  top: 54.36%;
+  width: 136.866%;
+  height: 62.262%;
+  max-width: none;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.brand-story .vision__ghost-stroke {
+  position: absolute;
+  left: 48.919%;
+  top: 11.586%;
+  width: 42.687%;
+  height: 11.497%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+.brand-story .vision__copy {
+  position: absolute;
+  left: 50%;
+  top: 38.298%;
+  width: 58.641%;
+  margin: 0;
+  transform: translate(-50%, var(--copy-drift, 0px));
+  text-align: center;
+  font-size: clamp(20px, 2.083333vw, 40px);
+  line-height: 1.18;
+  font-weight: 500;
+  color: #0f1011;
+}
+.brand-story .vision__copy > span:first-child { color: #b0b0b0; }
+.brand-story .why {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  height: var(--panel-height);
+  min-height: 0;
+  margin: var(--cover-travel) 0 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #013afa;
+  color: white;
+}
+.why__background, .why__lines { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+.why__background img {
+  position: absolute;
+  left: 46.223%;
+  top: 48.683%;
+  width: 55.054%;
+  height: 222.391%;
+  max-width: none;
+  object-fit: cover;
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: .6;
+}
+.why__line { position: absolute; display: block; background-repeat: no-repeat; background-size: 100% 100%; }
+.why__line--top { left: 10.217%; top: 27.964%; width: 77.5%; height: 1px; background-image: url('assets/imgVector311.svg'); }
+.why__line--bottom { left: 18.859%; top: 61.702%; width: 60.217%; height: 1px; background-image: url('assets/imgVector312.svg'); }
+.why__line--left { left: 18.478%; top: 15.4%; width: 1px; height: 56.332%; background-image: url('assets/imgVector313.svg'); }
+.why__line--right { left: 81.413%; top: 18.54%; width: 1px; height: 56.332%; background-image: url('assets/imgVector313.svg'); }
+.brand-story .why > h2 {
+  position: absolute;
+  top: 39.109%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  font-size: clamp(40px, 7.1875vw, 138px);
+  line-height: .87;
+  letter-spacing: -.035em;
+  z-index: 1;
+}
+.brand-story .benefits { position: absolute; inset: 0; }
+.brand-story .benefits article {
+  position: absolute;
+  width: 19.946%;
+  height: 20.77%;
+  padding: 1.667vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ffffff1a;
+  border-radius: 14px;
+  background: #ffffff30;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+.brand-story [data-benefit=hardware] { left: 16.196%; top: 12.158%; }
+.brand-story [data-benefit=connection] { left: 70.652%; top: 14.286%; }
+.brand-story [data-benefit=interaction] { left: 7.989%; top: 46.707%; }
+.brand-story [data-benefit=future] { left: 71.902%; top: 57.345%; }
+.brand-story .benefits h3 { margin: 0; font-size: clamp(13px, .9375vw, 18px); line-height: 1.55; letter-spacing: 0; font-weight: 500; }
+.brand-story .benefits p { margin: 0; font-size: clamp(11px, .729167vw, 14px); line-height: 1.57; color: #ffffff9c; }
+@media (max-width: 750px) {
+  .brand-story { --panel-height: 450px; --pin-top: 12px; --cover-travel: 22svh; margin: 20px 6% 0; }
+  .brand-story .vision { border-radius: 18px; }
+  .brand-story .vision__foreground { width: 138%; top: 66%; filter: blur(22px); }
+  .brand-story .vision__ghost { left: 9%; top: 36%; width: 82%; height: 106%; }
+  .brand-story .vision__copy { top: 34%; width: 84%; font-size: 22px; line-height: 1.35; }
+  .brand-story .why { height: auto; padding: 48px 22px; min-height: 740px; border-radius: 18px; }
+  .brand-story .why > h2 { position: relative; top: auto; left: auto; transform: none; text-align: center; font-size: clamp(32px, 7vw, 44px); line-height: 1.2; margin-bottom: 32px; }
+  .brand-story .benefits { position: relative; display: grid; gap: 16px; }
+  .brand-story .benefits article { position: relative; inset: auto; width: 100%; height: auto; min-height: 126px; padding: 22px; gap: 18px; }
+  .brand-story .benefits h3 { font-size: 17px; }
+  .brand-story .benefits p { font-size: 13px; }
+  .why__background img { left: 50%; top: 50%; width: 280%; height: 160%; }
+  .why__lines { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-story .vision { position: relative; top: auto; }
+  .brand-story .why { margin-top: -5.625vw; }
+  .brand-story .vision__art, .brand-story .vision__copy { --vision-drift: 0px !important; --copy-drift: 0px !important; }
+}

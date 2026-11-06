@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1134" height="332" viewBox="0 0 1134 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="stroke0_0_138" fill="white">
+<path d="M1134 166C1134 257.679 880.145 332 567 332C253.855 332 0 257.679 0 166C0 74.3207 253.855 0 567 0C880.145 0 1134 74.3207 1134 166Z"/>
+</mask>
+<path id="Ellipse 976" d="M1134 166C1134 257.679 880.145 332 567 332C253.855 332 0 257.679 0 166C0 74.3207 253.855 0 567 0C880.145 0 1134 74.3207 1134 166Z" stroke-width="4" stroke="url(#paint0_linear_0_138)" mask="url(#stroke0_0_138)"/>
+<defs>
+<linearGradient id="paint0_linear_0_138" x1="562" y1="332" x2="562" y2="3" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7C1E1"/>
+<stop offset="1" stop-color="#666666" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
